@@ -1,7 +1,7 @@
 FROM registry.cn-hangzhou.aliyuncs.com/k8ops-base/centos:7-v1
 
 RUN set -eux \
-  ;install_packages zsh git vim \
+  ; install_packages zsh git vim \
   ; chsh -s /bin/zsh
 
 COPY ./rootfs /
@@ -18,3 +18,6 @@ RUN set -eux \
   ; kubectl krew system receipts-upgrade \
   ; kubectl krew install ctx \
   ; kubectl krew install ns
+
+ENV SHELL=/bin/zsh
+ENTRYPOINT ["/bin/zsh"]

@@ -13,7 +13,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH=/root/.krew}/bin:$PATH
 
 alias k=kubectl
 alias h3=helm3
